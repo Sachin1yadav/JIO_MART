@@ -25,13 +25,32 @@ function Navbar(){
       
 
       <Offcanvas show={show} onHide={handleClose}>
+        <div className="hello">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Hello, Sign in</Offcanvas.Title>
+          <br/>
+          <Button variant="outline-info">Acount</Button> 
+          <Button variant="outline-info">Orders</Button> 
+           
         </Offcanvas.Header>
+        </div>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <div className="slidP">
+         <Link to="/"> <p>Home</p></Link>
+           <Link to="/mens"> <p>Mens</p></Link>
+           <Link to="/women"> <p>Women</p></Link>
+           <Link to="/cart"> <p>Cart</p></Link>
+           <Link to="/sign"> <p>Register</p></Link>
+           <Link to="/login"> <p>Login</p></Link>
+           <Link to="/"> <p>My List</p></Link>
+          
+          <hr style={{height:"10px"}} />
+          <p>My Account</p>
+          <p>Need Help?</p>
+          <p>About Us</p>
+          </div>
         </Offcanvas.Body>
+        
       </Offcanvas>
 
 

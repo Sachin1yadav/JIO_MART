@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #23242a;
+  /* background-color: #23242a; */
 }
 .header {
   position: absolute;
@@ -86,4 +86,32 @@ body {
   width: 500%;
   height: 100%;
   object-fit: cover;
+}
+.hello{
+  width: 100%;
+  /* border: 1px solid rgb(38, 0, 255); */
+  height: 100px;
+  display: grid;
+   color: white;
+  justify-content: baseline;
+  align-items: center;
+  gap: 30px;
+  background-color: rgb(47, 52, 52);
+}
+.slidP{
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+.slidP p{
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+}
+.slidP p:hover{
+ color: black;
+ font-weight: bold;
+ /* box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px; */
 }

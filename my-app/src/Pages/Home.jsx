@@ -1,13 +1,13 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Products from './Products';
 import { useToast, Button } from "@chakra-ui/react";
-import ProducShow from './Productshow';
+ import ProducShow from './Productshow';
 function Home() {
     const toast = useToast();
   return (
     <>
      
-    <Carousel fade={true} slide={false} hover={false}>
+    <Carousel fade={true} slide={false} pause={false}>
       <Carousel.Item interval={2000}>
         <img
           className="d-block "

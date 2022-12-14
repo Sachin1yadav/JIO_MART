@@ -10,14 +10,14 @@ import ProducShow from"./Pages/Productshow"
 function App() {
   return (
     <div className="App">
-    <Navbar/> 
-      <Allroute/>
+    {/* <Navbar/>    */}
+      {/* <Allroute/> */}
      {/* <Login/> */}
      {/* <Sign/> */}
      {/* <DarkVariantExample/> */}
-     {/* <ProducShow/> */}
-     {/* <ProducShow/> */}
-     {/* <ProducShow/> */}
+     {/* <Products/> */}
+     
+     <ProducShow/>
     </div>
   );
 }

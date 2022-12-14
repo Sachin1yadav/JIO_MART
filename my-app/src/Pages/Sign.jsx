@@ -29,7 +29,7 @@ function Sign(){
                    <i></i>
             </div>
             <div className="signDiv1" >
-            <p>Have You Not Register Yes?</p>
+            <p>Do You Have Alrady Accoutn?</p>
             <Link to="/login">
             <h6  className="sign1"   >Login</h6>
             </Link>

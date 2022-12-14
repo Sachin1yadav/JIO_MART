@@ -1,4 +1,4 @@
-* {
+/* * {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
@@ -16,6 +16,7 @@ body {
   width: 350px;
   height: 190px;
   background: #333;
+   
   transition: 0.5s;
 }
 .card:hover {
@@ -119,7 +120,7 @@ body {
   width: 90%;
   height: 90%;
   margin: auto;
-  /* filter: grayscale(1); */
+  
 }
 
 .content {
@@ -154,7 +155,7 @@ body {
 }
 .Hdata {
   display: flex;
-  /* flex-direction: column; */
+ 
   justify-content: space-between;
   margin: 20px 0;
 }
@@ -193,3 +194,143 @@ body {
 .actionBtn button:hover {
   opacity: 1;
 }
+ .maindiv{
+  
+  gap: 20px;
+  display: flex;
+   
+ } */
+
+
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+ }
+ section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #232323;
+  overflow: hidden;
+  padding: 100px 20px;
+  box-sizing: border-box; 
+}
+section::before{
+  content: '';
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ef3b36;
+  clip-path: circle(65% at 100% -20%);
+}
+section::after{
+  content: '';
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #47aafa;
+  clip-path: circle(35% at 0% 100%);
+}
+.container{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .card{
+position: relative;
+width: 300px;
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 20px 40px;
+background: rgba(255,255,255,0.5);
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+backdrop-filter: blur(15px);
+}
+.container .card .imgB{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+transition: 0.5s ease-in-out;
+}
+.container .card:hover .imgB{
+  transform: translateY(-100px)
+}
+
+
+.container .card .imgB img{
+ max-width: 100%;
+ margin: 0 0 20px;
+ transition: 05s ease-in-out;
+  }
+  .container .card:hover .imgB img{
+    transform: translate(-20px,-40px) rotate(-25deg) scale(1.4)
+  }
+  .imgB h2{ 
+    color: #fff;
+    font-weight: 600;
+  }
+  .content{
+    position:absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+  }
+  .card:hover .content{
+    opacity: 1;
+   transform: translateY(50px);
+    visibility: visible;
+  }
+  .price .ratting{
+ display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 8px 20px;
+  }
+  .price h3, .ratting h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  .price span,.ratting span{
+color: rgb(76, 92, 231);
+text-align: center;
+font-size: 14px;
+  }
+ 
+ .btn{
+  position: relative;
+  top: 10px;
+  padding: 12px 30px;
+  background-color: #fff;
+  border-radius: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+ }
