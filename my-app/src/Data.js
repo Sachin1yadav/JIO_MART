@@ -9,10 +9,10 @@ const data = [
       price: "₹119900",
   
       image: [
-        "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbr37gm57f7.jpeg?q=70",
-        "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrnpyygbv9.jpeg?q=70",
-        "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrpksqr8zu.jpeg?q=70",
-        "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrgcctfysm.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kp78e4w0/mobile/b/2/u/11x-11x-mi-original-imag3hqsshfzpv4u.jpeg?q=70",
+        "https://pngimg.com/uploads/iphone_11/iphone_11_PNG42.png",
+        "https://pngimg.com/uploads/iphone_11/iphone_11_PNG37.png",
+        "https://pngimg.com/uploads/iphone_11/iphone_11_PNG38.png",
         "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrqwsxbmuh.jpeg?q=70",
       ],
       review: [

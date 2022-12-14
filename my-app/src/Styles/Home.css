@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,8 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background-color: #23242a; */
-}
+  background-color: #23242a;
+} */
 .header {
   position: absolute;
   top: 0;

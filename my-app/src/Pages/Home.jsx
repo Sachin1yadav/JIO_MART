@@ -52,7 +52,7 @@ function Home() {
      
 {/* .....................prodcuts */}
  
- <ProducShow/>
+ <Products/>
  
 
 
