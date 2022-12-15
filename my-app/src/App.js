@@ -7,17 +7,18 @@ import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Allroute from "./AllRoutes/AllRote";
 import ProducShow from "./Pages/Productshow";
+import Details from"./Pages/Details"
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/>    */}
-      {/* <Allroute/> */}
+      <Navbar/>   
+      <Allroute/>
       {/* <Login/> */}
       {/* <Sign/> */}
 
-      <Products/>
+      {/* <Products/> */}
       {/* <ProducShow /> */}
-
+{/* <Details/> */}
       {/* <ProductCord /> */}
     </div>
   );

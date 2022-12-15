@@ -73,7 +73,7 @@ function ProductCord(data) {
   return (
     <>
       
-        {data.data.map((item, index) => (
+        {/* {data.data.map((item, index) => (
           <ProducShow
             key={index}
             name={item.name}
@@ -82,7 +82,7 @@ function ProductCord(data) {
             url={item.image[0]}
             id={item.id}
           />
-        ))}
+        ))} */}
      
     </>
   );

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:"Poppins",sans-serif ;
+    
 }
 
 
@@ -13,6 +14,27 @@ body{
     min-height: 100vh;
     background-color: #23242a;
 }
+body::before{
+    content: '';
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #f62e27;
+    clip-path: circle(65% at 100% -20%);
+    border: 5px solid yellow;
+  }
+  body::after{
+    content: '';
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #309ffa;
+    clip-path: circle(35% at 0% 100%);
+  }
 .box{
     position: relative;
     width: 380px;

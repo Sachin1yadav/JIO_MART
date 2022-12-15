@@ -21,7 +21,7 @@ function Navbar() {
         <ul className="navigate">
           <li>
             <p variant="primary" onClick={handleShow}>
-              Sidebar
+               <img className="slideIMG" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGWWwREi7bMeKK1XMVB03Oug6lvtRpYN_yXcdeNn7jieT9uVV09lNlanr9q3Ih65ChWc&usqp=CAU"  />
             </p>
           </li>
 
