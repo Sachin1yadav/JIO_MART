@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import Products from "./Products";
+import LargeWithLogoLeft from"./Footer"
 import { useToast, Button } from "@chakra-ui/react";
 import ProducShow from "./Productshow";
 function Home() {
@@ -11,7 +12,7 @@ function Home() {
           <img
             className="d-block "
             style={{ height: "100vh", width: "220vh" }}
-            src="https://images.unsplash.com/photo-1528141603775-81fd11f61682?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fDE5MjAlMjB4JTIwMTA4MHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1671091658_Oneplus_10T_Desktop_web_num.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -23,7 +24,7 @@ function Home() {
           <img
             className="d-block "
             style={{ height: "100vh", width: "220vh" }}
-            src="https://images.unsplash.com/photo-1550475966-70af27831597?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fDE5MjAlMjB4JTIwMTA4MHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://img.freepik.com/free-psd/black-friday-sale-banner-with-red-black-glued-paper-background_1361-2847.jpg?w=740&t=st=1671131791~exp=1671132391~hmac=345a81c18ca76cddd0fc85ecb7a12cb0e884770c875c1b3d82e07c279e9a195e"
             alt="Second slide"
           />
 
@@ -36,7 +37,7 @@ function Home() {
           <img
             className="d-block "
             style={{ height: "100vh", width: "220vh" }}
-            src="https://images.unsplash.com/photo-1511227499331-25c621db940e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fDE5MjAlMjB4JTIwMTA4MHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://img.freepik.com/free-vector/black-friday-sale-design-template-conceptual-layout-web-print_91128-1081.jpg?w=900&t=st=1671131572~exp=1671132172~hmac=ac0f27fba42cfae71f75bf29778f50e52d79ebadb77fca4889593844ae9d101d"
             alt="Third slide"
           />
 
@@ -52,6 +53,7 @@ function Home() {
       {/* .....................prodcuts */}
 
       <Products />
+      <LargeWithLogoLeft/>
     </>
   );
 }

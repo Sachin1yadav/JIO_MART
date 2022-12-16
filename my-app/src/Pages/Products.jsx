@@ -1,25 +1,54 @@
- import ProductCord from "./ProductCord"
-import data from"../Data"
- import ProducShow from "./Productshow"
- function Products(){
+import ProductCord from "./ProductCord";
+// import data from"../Data"
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { useEffect } from "react";
+import { useState } from "react";
+import ProducShow from "./Productshow";
+ import {responsive} from"./ProductCord"
+function Products() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const getpro = () => {
+    return fetch("https://b-tmart-api-5tjm.vercel.app/data").then((response) =>
+      response.json()
+    );
+     
+  };
+   
+  useEffect(() => {
+    setLoading(true);
+    getpro()
+      .then((res) => {
+        setData(res);
+        // console.log("use",res)
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log("e", err);
+      });
+  }, []);
 
-console.log(data)
+  console.log("data", data);
 
-
-  return(
+  return (
     <div>
-       <div className="landing-page-categories">
-       <div className="category" id="shoes">
+      <div className="landing-page-categories">
+        <div className="category" id="shoes">
           <h1 className="heading">shoes</h1>
+          
           <ProducShow
             data={data.filter((item) => item.catogeries === "shoes")}
           />
+           
         </div>
         <div className="category" id="mobile">
           <h1 className="heading">Mobile</h1>
+           
           <ProducShow
             data={data.filter((item) => item.catogeries === "phone")}
           />
+           
         </div>
         <div className="category" id="elec">
           <h1 className="heading">Electronics</h1>
@@ -47,10 +76,9 @@ console.log(data)
             )}
           />
         </div>
+      </div>
     </div>
-    </div>
-  )
- }
+  );
+}
 
-
- export default Products
+export default Products;

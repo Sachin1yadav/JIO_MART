@@ -11,14 +11,13 @@ function Allroute() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign" element={<Sign />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/mens" element={<Men />} />
-        <Route path="/women" element={<Women />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/sign" element={<Sign/>} />
+        <Route path="/cart" element={<Cart/>} />
+      
         {/* <Route path="/products" element={<Products/>}      ></Route> */}
-        <Route path="/data/:id" element={<Details />}></Route>
+        <Route path="/data/:id" element={<Details/>}></Route>
       </Routes>
     </>
   );
