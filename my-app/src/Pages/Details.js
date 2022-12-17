@@ -8,11 +8,12 @@ import { CartContext } from "../Contexts/CartContext";
 import CartContextProvider from "../Contexts/CartContext";
 
 function Details() {
+  const [count,setCount]=useState(0)
   const { id } = useParams();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
-  const { cartData, setCartData, handleAddToCart } = useContext(CartContext);
-
+  const { state,dispatch} = useContext(CartContext);
+console.log("count",count)
   const [img, setImg] = useState(0);
   useEffect(() => {
     fetch(`https://b-tmart-api-5tjm.vercel.app/data/${id}`)
@@ -96,9 +97,43 @@ function Details() {
             </h1>
             <p className="tex">inclusive of all taxes</p>
             <div className="addtocart">
+              {count===0?(
+                 <Button
+                 onClick={()=> { dispatch({
+                  type:"ADD_TO_CART",
+                  playload:data
+                 })
+                   setCount(count=1)
+                  }}
+                 size="md"
+                 height="48px"
+                 width="200px"
+                 border="2px"
+                 background="#45f3ff"
+                 // borderColor="green.500"
+               >
+                 Add To Cart
+               </Button>
+              ):
+              <Button
+              onClick={()=>  
+                setCount(count=0)
+               }
+              size="md"
+              height="48px"
+              width="200px"
+              border="2px"
+              background="#45f3ff"
+              // borderColor="green.500"
+            >
+              go to bag
+            </Button>
               
-                <Button
-                  onClick={() => console.log("DARA") }
+              }
+                {/* <Button
+                  onClick={()=>{handleAddToCart(data)
+                    setCount(count=count+1)
+                  }}
                   size="md"
                   height="48px"
                   width="200px"
@@ -107,7 +142,7 @@ function Details() {
                   // borderColor="green.500"
                 >
                   Add To Cart
-                </Button>
+                </Button> */}
                
             </div>
             <hr style={{ color: "white", marginTop: "10px" }}></hr>

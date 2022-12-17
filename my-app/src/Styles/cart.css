@@ -1,0 +1,121 @@
+ 
+ .min{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    height: 1000px;
+    gap: 30px;
+    background-color: black;
+    padding: 20px;
+    margin-top: 40px;
+ }
+ .item{
+    width: 60%;
+    height: 90%;
+    border-radius: 10px;
+    color: white;
+    margin: auto;
+    background-color: rgb(44, 43, 43);
+    /* border: 1px solid green; */
+ }
+ .place{
+    width: 35%;
+    height: 350px;
+    margin-top: 30px;
+    /* border: 1px solid blue; */
+    font-size: 17px;
+    letter-spacing: 1px;
+    
+    
+    text-align: start;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(44, 43, 43);
+    padding: 20px;
+    color:white;
+ }
+ .pricedata{
+    display: flex;
+    color:white;
+    /* color: rgb(90, 247, 90); */
+    flex-direction: row;
+    justify-content: space-between;
+ }
+ .ord{
+    font-size: 20px;
+    justify-content: center;
+  margin-left: 20px;  
+ }
+
+ .address{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border: 1px solid black;
+width: 100%;
+border-top-left-radius: 10px;
+padding: 10px;
+color: black;
+background-color: white;
+font-size: 17px;
+letter-spacing: 1px;
+margin: auto;
+height: 50px;
+align-content: center;
+align-items: center;
+}
+.devli{
+    display: flex;
+    gap: 10px;
+flex-direction: row;
+justify-content: space-between;
+}
+.devli input{
+    border-radius: 5px;
+    width: 100px;
+    border-color: teal;
+}
+ .addedItem{
+    width: 100%;
+    color: black;
+    height: auto;
+    /* color: rgb(246, 246, 246); */
+    /* border: 1px solid red; */
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+ }
+ .item1{
+   /* border: 2px solid green; */
+   width: 100%;
+   height: auto;
+   padding: 20px;
+ }
+   .div11{
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+align-items: center;
+      justify-content: space-between;
+   }
+   .div11 div img{
+      /* border: 1px solid red; */
+      height: 100px;
+      width:100px;
+   }
+   .delet:hover{
+color: rgb(235, 0, 0);
+   }
+   .namediv{
+      /* border: 1px solid red; */
+      width: 400px;
+      letter-spacing: 0.8px;
+      text-align: start;
+   }
+   .namediv span{
+      color: red;
+   }

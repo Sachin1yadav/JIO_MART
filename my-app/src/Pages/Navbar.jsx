@@ -1,7 +1,7 @@
 import "../Styles/Home.css";
 import React, { useState } from "react";
- 
-import { FaShoppingCart,FaUserCircle } from "react-icons/fa";
+
+import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link, NavLink } from "react-router-dom";
@@ -12,7 +12,6 @@ import {
   Dropdown,
   FormControl,
   Nav,
- 
 } from "react-bootstrap";
 import {
   Menu,
@@ -23,7 +22,7 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 function Navbar() {
   const [show, setShow] = useState(false);
 
@@ -32,7 +31,7 @@ function Navbar() {
 
   return (
     <div>
-      <div className="header"  >
+      <div className="header">
         {/* <img
           className="logo"
           src="btlogo.PNG"
@@ -42,8 +41,10 @@ function Navbar() {
         <ul className="navigate">
           <li>
             <p variant="primary" onClick={handleShow}>
-            
-               <img className="slideIMG" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGWWwREi7bMeKK1XMVB03Oug6lvtRpYN_yXcdeNn7jieT9uVV09lNlanr9q3Ih65ChWc&usqp=CAU"  />
+              <img
+                className="slideIMG"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGWWwREi7bMeKK1XMVB03Oug6lvtRpYN_yXcdeNn7jieT9uVV09lNlanr9q3Ih65ChWc&usqp=CAU"
+              />
             </p>
           </li>
 
@@ -102,79 +103,83 @@ function Navbar() {
             to="/"
           >
             <li>
-            <img
-          className="logo"
-          src="btlogo.PNG"
-          alt=""
-        />
+              <img className="logo" src="btlogo.PNG" alt="" />
             </li>
           </NavLink>
           <div className="search">
-          <input type="text" placeholder="search Product" />
-        </div>
-          
-        <Menu isLazy>
-  <MenuButton  >
-    <p style={{color:"white"}}> 
-    <FaUserCircle fontSize="30px"   />
-    </p>
-     </MenuButton>
-  <MenuList style={{color:"black",background:"black"}}>
-    {/* MenuItems are not rendered unless Menu is open */}
-    <MenuItem style={{color:"white",background:"black",textDecoration:"none"}}>
-    <Link to="/login">LogIn</Link>
-    </MenuItem>
-    <MenuItem style={{color:"white",background:"black"}}><Link to="/sign">Sign In</Link></MenuItem>
-    <MenuItem style={{color:"white",background:"black"}}>About</MenuItem>
-  </MenuList>
-</Menu>
-         {/* <Link  to="./cart"  >
+            <input type="text" placeholder="search Product" />
+          </div>
+
+          <Menu isLazy>
+            <MenuButton>
+              <p style={{ color: "white" }}>
+                <FaUserCircle fontSize="30px" style={{ marginRight: "20px" }} />
+              </p>
+            </MenuButton>
+            <MenuList style={{ color: "black", background: "black" }}>
+              {/* MenuItems are not rendered unless Menu is open */}
+              <MenuItem
+                style={{
+                  color: "white",
+                  background: "black",
+                  textDecoration: "none",
+                }}
+              >
+                <Link to="/login">LogIn</Link>
+              </MenuItem>
+              <MenuItem style={{ color: "white", background: "black" }}>
+                <Link to="/sign">Sign In</Link>
+              </MenuItem>
+              <MenuItem style={{ color: "white", background: "black" }}>
+                About
+              </MenuItem>
+            </MenuList>
+          </Menu>
+          {/* <Link  to="./cart"  >
          <p style={{color:"white",marginLeft:"20px",marginTop:"9px"}}>cart</p>
 
          </Link> */}
- <Nav>
-          <Dropdown   alignRight>
-            <Dropdown.Toggle  variant="success" >
-              <FaShoppingCart color="white" fontSize="25px"/>
-              <Badge> 0</Badge>
-            </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{ minWidth: 300 }}>
-              {1 > 0 ? (
-                <>
-                  {[].map((prod) => (
-                    <span className="cartitem" key={prod.id}>
-                      <img
-                        src={prod.image}
-                        className="cartItemImg"
-                        alt={prod.name}
-                      />
-                      <div className="cartItemDetail">
-                        <span>{prod.name}</span>
-                        <span>₹ {prod.price.split(".")[0]}</span>
-                      </div>
-                      <AiFillDelete
-                        fontSize="20px"
-                        style={{ cursor: "pointer" }}
-                       
-                      />
-                    </span>
-                  ))}
-                  <Link to="/cart">
-                    <Button style={{ width: "95%", margin: "0 10px" }}>
-                      Go To Cart
-                    </Button>
-                  </Link>
-                </>
-              ) : (
-                <span style={{ padding: 10 }}>Cart is Empty!</span>
-              )}
-            </Dropdown.Menu>
-          </Dropdown>
-        </Nav>
-        
+          <Nav>
+            <Dropdown alignRight>
+              <Dropdown.Toggle style={{ height: "40px", width: "50px" }}>
+                <FaShoppingCart color="white" fontSize="25px" />
+                <Badge> 0</Badge>
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu style={{ minWidth: 300 }}>
+                {1 > 0 ? (
+                  <>
+                    {[].map((prod) => (
+                      <span className="cartitem" key={prod.id}>
+                        <img
+                          src={prod.image}
+                          className="cartItemImg"
+                          alt={prod.name}
+                        />
+                        <div className="cartItemDetail">
+                          <span>{prod.name}</span>
+                          <span>₹ {prod.price.split(".")[0]}</span>
+                        </div>
+                        <AiFillDelete
+                          fontSize="20px"
+                          style={{ cursor: "pointer" }}
+                        />
+                      </span>
+                    ))}
+                    <Link to="/cart">
+                      <Button style={{ width: "95%", margin: "0 10px" }}>
+                        Go To Cart
+                      </Button>
+                    </Link>
+                  </>
+                ) : (
+                  <span style={{ padding: 10 }}>Cart is Empty!</span>
+                )}
+              </Dropdown.Menu>
+            </Dropdown>
+          </Nav>
         </ul>
-        
       </div>
     </div>
   );

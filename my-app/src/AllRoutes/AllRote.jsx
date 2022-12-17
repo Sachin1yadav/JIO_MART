@@ -7,6 +7,7 @@ import Men from "../Pages/Mans";
 import Cart from "../Pages/Cart";
 import Details from "../Pages/Details";
 import Products from "../Pages/Products";
+import Orders from "../Pages/order";
 function Allroute() {
   return (
     <>
@@ -15,8 +16,8 @@ function Allroute() {
         <Route path="/login" element={<Login/>} />
         <Route path="/sign" element={<Sign/>} />
         <Route path="/cart" element={<Cart/>} />
-      
-        {/* <Route path="/products" element={<Products/>}      ></Route> */}
+        <Route path="/orders" element={<Orders/>} />
+        <Route path="/products" element={<Products/>}      ></Route>
         <Route path="/data/:id" element={<Details/>}></Route>
       </Routes>
     </>

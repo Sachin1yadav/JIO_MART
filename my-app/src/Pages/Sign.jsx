@@ -10,6 +10,7 @@ function Sign(){
     return(
         <div>
           <Navbar/>
+          <div className="whole">
       <div  className="box" >
     <div className="form">
        <h2>Register</h2>
@@ -55,7 +56,7 @@ function Sign(){
             </div>
     </div>
 
-
+    </div>
       </div>
        
 

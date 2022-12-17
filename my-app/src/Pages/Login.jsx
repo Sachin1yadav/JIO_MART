@@ -9,6 +9,7 @@ function Login() {
   return (
     <div>
       <Navbar />
+      <div className="whole">
       <div className="box">
         <div className="form">
           <h2>Login</h2>
@@ -51,6 +52,7 @@ function Login() {
       </div>
 
       <div></div>
+      </div>
     </div>
   );
 }
