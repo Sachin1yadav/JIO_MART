@@ -42,14 +42,6 @@ function Products() {
           />
            
         </div>
-        <div className="category" id="mobile">
-          <h1 className="heading">Mobile</h1>
-           
-          <ProducShow
-            data={data.filter((item) => item.catogeries === "phone")}
-          />
-           
-        </div>
         <div className="category" id="elec">
           <h1 className="heading">Electronics</h1>
           <ProducShow
@@ -62,6 +54,26 @@ function Products() {
             data={data.filter((item) => item.catogeries === "Sports")}
           />
         </div>
+        <div className="category" id="mobile">
+          <h1 className="heading">Mobile</h1>
+           
+          <ProducShow
+            data={data.filter((item) => item.catogeries === "phone")}
+          />
+           
+        </div>
+        {/* <div className="category" id="elec">
+          <h1 className="heading">Electronics</h1>
+          <ProducShow
+            data={data.filter((item) => item.catogeries === "Electronics")}
+          />
+        </div> */}
+        {/* <div className="category" id="sport">
+          <h1 className="heading">Sports</h1>
+          <ProducShow
+            data={data.filter((item) => item.catogeries === "Sports")}
+          />
+        </div> */}
         <div className="category" id="fashion">
           <h1 className="heading">Fashion</h1>
           <ProducShow

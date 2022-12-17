@@ -302,8 +302,10 @@ transition: 0.5s ease-in-out;
   }
   .imgB h2{ 
     color: #fff;
-    font-weight: 550;
-    
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 1px;
+    position: relative;
   }
  .container .card .content{
     position:absolute;
@@ -347,13 +349,13 @@ transition: 0.5s ease-in-out;
 
   }
   .price span,.ratting span{
-color: rgb(0, 19, 187);
+color: rgb(217, 255, 2);
 text-align: center;
 font-size: 18px;
 font-weight: bold;
 justify-content: center;
 align-items: center;
-margin-top: -5px;
+margin-top: -3px;
 transition: 0.5s;
   }
  
@@ -377,7 +379,7 @@ margin: 10px;
   color: black;
   text-decoration: none;
   font-weight: bolder;
-  background-color: rgb(14, 225, 204);
+  background-color: #45f3ff;
   cursor: pointer;
 }
 .btn2 p{

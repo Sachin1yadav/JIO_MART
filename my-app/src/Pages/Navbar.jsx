@@ -1,11 +1,19 @@
 import "../Styles/Home.css";
 import React, { useState } from "react";
-import { IconName } from "react-icons/fc";
-import { FaRegUser } from "react-icons/fa";
-import Button from "react-bootstrap/Button";
+ 
+import { FaShoppingCart,FaUserCircle } from "react-icons/fa";
+import { AiFillDelete } from "react-icons/ai";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link, NavLink } from "react-router-dom";
-
+import {
+  Badge,
+  Button,
+  Container,
+  Dropdown,
+  FormControl,
+  Nav,
+ 
+} from "react-bootstrap";
 import {
   Menu,
   MenuButton,
@@ -107,22 +115,63 @@ function Navbar() {
           
         <Menu isLazy>
   <MenuButton  >
-    <p style={{color:"white"}}>user</p>
+    <p style={{color:"white"}}> 
+    <FaUserCircle fontSize="30px"   />
+    </p>
      </MenuButton>
-  <MenuList>
+  <MenuList style={{color:"black",background:"black"}}>
     {/* MenuItems are not rendered unless Menu is open */}
-    <MenuItem>
+    <MenuItem style={{color:"white",background:"black",textDecoration:"none"}}>
     <Link to="/login">LogIn</Link>
     </MenuItem>
-    <MenuItem><Link to="/sign">Sign In</Link></MenuItem>
-    <MenuItem>About</MenuItem>
+    <MenuItem style={{color:"white",background:"black"}}><Link to="/sign">Sign In</Link></MenuItem>
+    <MenuItem style={{color:"white",background:"black"}}>About</MenuItem>
   </MenuList>
 </Menu>
-         <Link  to="./cart"  >
+         {/* <Link  to="./cart"  >
          <p style={{color:"white",marginLeft:"20px",marginTop:"9px"}}>cart</p>
 
-         </Link>
+         </Link> */}
+ <Nav>
+          <Dropdown   alignRight>
+            <Dropdown.Toggle  variant="success" >
+              <FaShoppingCart color="white" fontSize="25px"/>
+              <Badge> 0</Badge>
+            </Dropdown.Toggle>
 
+            <Dropdown.Menu style={{ minWidth: 300 }}>
+              {1 > 0 ? (
+                <>
+                  {[].map((prod) => (
+                    <span className="cartitem" key={prod.id}>
+                      <img
+                        src={prod.image}
+                        className="cartItemImg"
+                        alt={prod.name}
+                      />
+                      <div className="cartItemDetail">
+                        <span>{prod.name}</span>
+                        <span>₹ {prod.price.split(".")[0]}</span>
+                      </div>
+                      <AiFillDelete
+                        fontSize="20px"
+                        style={{ cursor: "pointer" }}
+                       
+                      />
+                    </span>
+                  ))}
+                  <Link to="/cart">
+                    <Button style={{ width: "95%", margin: "0 10px" }}>
+                      Go To Cart
+                    </Button>
+                  </Link>
+                </>
+              ) : (
+                <span style={{ padding: 10 }}>Cart is Empty!</span>
+              )}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Nav>
         
         </ul>
         

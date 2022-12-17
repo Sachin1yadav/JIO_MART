@@ -8,7 +8,7 @@
    height: 200vh;
    display: flex;
    gap: 30px;
-   padding: 20px;
+   padding: 30px;
    position: relative;
    background-color: black;
    margin-top: 70px;
@@ -18,6 +18,7 @@
    /* border:  1px solid rgb(34, 255, 0); */
    width: 55vw;
    height: 100vh;
+   
    /* position: sticky; */
    display: flex;
    position: fixed; 
@@ -36,6 +37,9 @@
    background-color: rgb(44, 43, 43);
    flex-direction: column;
    padding: 20px;
+   justify-content: start;
+   align-items: flex-start;
+   align-content: flex-start;
    /* position: relative; */
 
  }
@@ -44,6 +48,7 @@
    width: 8vw;
    height: 60vh;
    justify-content: center;
+   border-radius: 5px;
    /* margin: auto; */
    background-color: rgb(255, 255, 255);
    gap: 5px;
@@ -58,6 +63,7 @@ flex-direction: column
    /* border: 2px solid rgb(238, 13, 13); */
    width: 33vw;
    height: 80vh;
+   border-radius: 10px;
 margin-top: -0px;
 padding: 20px 20px 20px 20px;
 justify-content: center;
@@ -82,7 +88,8 @@ margin: auto;
   .imagess div img{
     width: 70px;
     height: 80px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
     /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
     margin: auto;
   }
@@ -90,9 +97,14 @@ margin: auto;
    .proname{
     /* border: 1px solid red; */
     width: 100%;
-    font-weight: 700;
+    font-weight: 500;
+    text-align: start;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
+    align-items: flex-start;
+    justify-content: start;
+    align-content: flex-start;
+    font-family: Montserrat, sans-serif;
     margin-top: 20px;
    }
    .rating{
@@ -101,10 +113,19 @@ margin: auto;
     font-size: 25px;
     color: white;
     border: 1px solid green;
-    width: 69px;
-    padding: 10px;
+    width: 70px;
+    display: flex;
+    /* border: 1px solid red; */
+    padding: 5px;
     background-color: green;
+    justify-content: center;
+    align-content: centerc;
+    
     border-radius: 10px;
+   }
+   .rating img{
+    width: 25px;
+    height: 25px;
    }
    .price{
     color: white;
@@ -119,21 +140,24 @@ margin: auto;
     margin-top: 3px;
    }
    .tex{
-    color: rgb(243, 0, 24);
+    color: rgb(255, 0, 43);
     justify-content: flex-start;
-    margin-left: -270px;
+    /* margin-left: -270px; */
     text-decoration: underline;
     letter-spacing: 0.5px;
+    /* font-size: 20px; */
    }
    .addtocart{
     width: 200px;
     height: 50px;
     justify-content: center;
-    /* border: 2px solid red; */
- /* background-color: rgb(246, 8, 115); */
+     
    margin-top: 30px;
    cursor: pointer;
    border-radius: 10px;
+   }
+   .addtocart:hover{
+    cursor: pointer;
    }
    .addtocart p{
     margin: auto;
@@ -152,7 +176,7 @@ margin: auto;
    margin-top: 10px;
 }
    .prodit p{
-    color: rgb(248, 248, 248);
+    color: rgb(116, 115, 113);
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
@@ -164,14 +188,63 @@ margin: auto;
     justify-content: flex-start;
    }
    .des{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    letter-spacing: 1px;
     margin-top: 10px;
     padding: 10px;
+    text-align: start;
    }
    .del{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     color: white;
+    text-align: start;
+    letter-spacing: 1px;
+   }
+   .del p{
+    margin: 1px;
+   }
+   .del h2{
+    font-size: 20px;
+    /* text-decoration: underline; */
+    color: white;
+    justify-content: flex-start;
+   }
+   .info p{
+    color: rgb(116, 115, 113);
+   }
+   .offer{
+    padding: 10px;
+    color: rgb(116, 115, 113);
+   }
+
+   .offer h2{
+    font-size: 20px;
+    /* text-decoration: underline; */
+    color: white;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+   .offer span{
+    color: teal;
+    text-decoration: underline;
+    font-size: 18px;
+   }
+    
+   .emi{
+    text-align: start;
+    padding: 10px;
+    color: rgb(116, 115, 113);
+   }
+   .emi h2{
+    font-size: 20px;
+    text-decoration: underline;
+    color: white;
+    justify-content: flex-start;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
    }
