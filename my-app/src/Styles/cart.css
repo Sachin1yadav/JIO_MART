@@ -89,8 +89,8 @@ justify-content: space-between;
     background-color: white;
     flex-direction: column;
  }
- .item1{
-   /* border: 2px solid green; */
+ /* .item1{
+  
    width: 100%;
    height: auto;
    padding: 20px;
@@ -103,7 +103,7 @@ align-items: center;
       justify-content: space-between;
    }
    .div11 div img{
-      /* border: 1px solid red; */
+      
       height: 100px;
       width:100px;
    }
@@ -111,11 +111,18 @@ align-items: center;
 color: rgb(235, 0, 0);
    }
    .namediv{
-      /* border: 1px solid red; */
+       
       width: 400px;
       letter-spacing: 0.8px;
       text-align: start;
    }
    .namediv span{
       color: red;
-   }
+   } */
+   .text {
+      display: block;
+      width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }

@@ -3,17 +3,21 @@ import { useEffect, useContext } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
+import { Tooltip } from "@chakra-ui/react";
 import { Input, Button, Link, ButtonGroup } from "@chakra-ui/react";
 import { CartContext } from "../Contexts/CartContext";
-import CartContextProvider from "../Contexts/CartContext";
+// import CartContextProvider from "../Contexts/CartContext";
+import { Toast, useToast } from "@chakra-ui/react";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 function Details() {
-  const [count,setCount]=useState(0)
+  const toast = useToast();
+  const [count, setCount] = useState(0);
   const { id } = useParams();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
-  const { state,dispatch} = useContext(CartContext);
-console.log("count",count)
+  const { state, dispatch } = useContext(CartContext);
+  console.log("count", count);
   const [img, setImg] = useState(0);
   useEffect(() => {
     fetch(`https://b-tmart-api-5tjm.vercel.app/data/${id}`)
@@ -25,10 +29,22 @@ console.log("count",count)
       })
       .catch((e) => console.log(e));
   }, [id, img]);
-  let p = data.price + 100;
-  console.log("price", p);
 
   console.log("img", img);
+
+  const ItemADDED = (pitem) => {
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: pitem,
+    });
+    toast({
+      title: "Added",
+      description: `${pitem.name} Succefully Added to Cart`,
+      status: "success",
+      duration: 6000,
+      isClosable: true,
+    });
+  };
 
   if (loading) {
     return <Loading />;
@@ -38,14 +54,6 @@ console.log("count",count)
         <div className="main">
           <div className="imgdiv">
             <div className="imagess">
-              {/* {data.image.map((e,i)=>{
-                <div
-                onClick={() => setImg(e)}
-                className="sideImage"
-                style={{ backgroundImage: `url(${e})` }}
-              ></div>
-              })} */}
-
               <div>
                 {" "}
                 <img
@@ -80,6 +88,19 @@ console.log("count",count)
               </div>
             </div>
             <div className="curimg">
+              <Link to="/cart">
+                <Tooltip
+                  bg="gray.300"
+                  placement="bottom"
+                  color="black"
+                  label="Conitune Shoping"
+                >
+                  <button className="shopnow">
+                    <BsFillArrowLeftCircleFill />
+                  </button>
+                </Tooltip>
+              </Link>
+
               <img src={data?.image[img]} alt={data.name} />
             </div>
           </div>
@@ -97,52 +118,44 @@ console.log("count",count)
             </h1>
             <p className="tex">inclusive of all taxes</p>
             <div className="addtocart">
-              {count===0?(
-                 <Button
-                 onClick={()=> { dispatch({
-                  type:"ADD_TO_CART",
-                  playload:data
-                 })
-                   setCount(count=1)
-                  }}
-                 size="md"
-                 height="48px"
-                 width="200px"
-                 border="2px"
-                 background="#45f3ff"
-                 // borderColor="green.500"
-               >
-                 Add To Cart
-               </Button>
-              ):
-              <Button
-              onClick={()=>  
-                setCount(count=0)
-               }
+              {state.cartItem.some((p) => p.id === data.id) ? (
+                <Link to="/cart">
+                  <Button
+                    variant="danger"
+                    height="48px"
+                    width="200px"
+                    background="rgb(217,32,39)"
+                    color="white"
+                  >
+                    Go To Cart
+                  </Button>
+                  {/* <Button
+              
+              variant="danger"
               size="md"
               height="48px"
               width="200px"
               border="2px"
               background="#45f3ff"
-              // borderColor="green.500"
+               
             >
-              go to bag
-            </Button>
-              
-              }
-                {/* <Button
-                  onClick={()=>{handleAddToCart(data)
-                    setCount(count=count+1)
-                  }}
+              Go To Cart
+            </Button> */}
+                </Link>
+              ) : (
+                <Button
+                  onClick={() => ItemADDED(data)}
                   size="md"
                   height="48px"
                   width="200px"
                   border="2px"
                   background="#45f3ff"
-                  // borderColor="green.500"
+                  
                 >
                   Add To Cart
-                </Button> */}
+                </Button>
+              )}
+
                
             </div>
             <hr style={{ color: "white", marginTop: "10px" }}></hr>

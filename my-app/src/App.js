@@ -1,5 +1,6 @@
 import ProductCord from "./Pages/ProductCord";
 import "./App.css";
+import Loading from "./Pages/Loading";
 import Login from "./Pages/Login";
 import LargeWithLogoLeft from"./Pages/Footer"
 import Sign from "./Pages/Sign";
@@ -15,7 +16,7 @@ function App() {
     <div className="App">
       <Navbar/>     
        <Allroute/>
-      
+      {/* <Loading /> */}
       
     </div>
   );

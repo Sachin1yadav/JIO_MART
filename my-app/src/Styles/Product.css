@@ -27,8 +27,8 @@ section::before{
   left: 0;
   height: 100%;
   width: 100%;
-  /* background: #f62e27;
-  clip-path: circle(65% at 100% -20%); */
+    /* background: #f62e27;
+  clip-path: circle(65% at 100% -20%);   */
 }
 section::after{
   content: '';
@@ -37,8 +37,8 @@ section::after{
   left: 0;
   height: 100%;
   width: 100%;
-  /* background: #309ffa;
-  clip-path: circle(35% at 0% 100%); */
+    /* background: #309ffa;
+  clip-path: circle(35% at 0% 100%);   */
 }
 .container{
   position: relative;

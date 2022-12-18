@@ -6,9 +6,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ProducShow from "./Productshow";
  import {responsive} from"./ProductCord"
+ import Loading from "./Loading";
 function Products() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
+  const [load, setLoad] = useState(true);
   const getpro = () => {
     return fetch("https://b-tmart-api-5tjm.vercel.app/data").then((response) =>
       response.json()
@@ -17,12 +19,12 @@ function Products() {
   };
    
   useEffect(() => {
-    setLoading(true);
+    setLoad(true);
     getpro()
       .then((res) => {
         setData(res);
-        // console.log("use",res)
-        setLoading(false);
+        setLoad(false);
+         
       })
       .catch((err) => {
         console.log("e", err);
@@ -30,6 +32,11 @@ function Products() {
   }, []);
 
   console.log("data", data);
+
+if(load){
+  return <Loading/>
+}
+  
 
   return (
     <div>
