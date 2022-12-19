@@ -33,12 +33,12 @@ function Login() {
           </div>
 
           <div>
-
+                  <Link  to="/" >
           <Button className="submit"
       onClick={() =>
         toast({
-          title: 'Account created.',
-          description: "We've created your account for you.",
+          title: 'Login successfull.',
+          description: "We've Loged in your account.",
           status: 'success',
           duration: 9000,
           isClosable: true,
@@ -47,6 +47,7 @@ function Login() {
     >
       Login
     </Button>
+    </Link>
           </div>
         </div>
       </div>
