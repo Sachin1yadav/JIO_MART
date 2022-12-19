@@ -7,21 +7,11 @@ import { Input, LightMode } from "@chakra-ui/react";
 import { GrDeliver } from "react-icons/gr";
 import { useRef } from "react";
 import Rating from "./Rating";
-import {
-  FormControl,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-  FormLabel,
-  NumberInputStepper,
-  FormErrorMessage,
-  NumberInputField,
-  FormHelperText,
-  NumberInput,
-} from "@chakra-ui/react";
+ 
 import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
 // import { Button, ButtonGroup } from "@chakra-ui/react";
 import {
-  Modal,Select,RadioGroup,Radio,
+  Modal, 
   ModalOverlay,
   ModalContent,
   ModalHeader,
@@ -41,10 +31,23 @@ function Cart() {
 
   // console.log("CARTDATA", cartData);
   const [total, setTotal] = useState();
+  const [discount, setDiscount] = useState();
+  const changePrice = (str) => {
+    let res = str.replace(/\D/g, "");
+    return parseInt(res);
+  };
   useEffect(() => {
     setTotal(
+       
       state.cartItem.reduce(
-        (acc, curr) => acc + Number(curr.price) * curr.qty,
+        (acc, curr) => acc + changePrice(curr.price) * curr.qty,
+        0
+      )
+    );
+    setDiscount(
+       
+      state.cartItem.reduce(
+        (acc, curr) => acc + changePrice(curr.price) * curr.qty *25/100,
         0
       )
     );
@@ -91,7 +94,7 @@ function Cart() {
           <div className="address">
             <div>
               {" "}
-              <p>My Cart(1)</p>{" "}
+              <p>My Cart({state.cartItem.length})</p>{" "}
             </div>
             <div className="devli">
               <div>
@@ -141,16 +144,16 @@ function Cart() {
                     </Col>
                     <Col md={2}>
                       <Form.Control
-                        as="select"
-                        value={prod.qty}
-                        onChange={(e) =>
-                          dispatch({
-                            type: "CHANGE_CART_QTY",
-                            payload: {
-                              id: prod.id,
-                              qty: e.target.value,
-                            },
-                          })
+                         as="select"
+                         value={prod.qty}
+                         onChange={(e) =>
+                           dispatch({
+                             type: "CHANGE_CART_QTY",
+                             payload: {
+                               id: prod.id,
+                               qty: e.target.value,
+                             },
+                           })
                         }
                       >
                         {" "}
@@ -184,7 +187,7 @@ function Cart() {
 
           <div className="pricedata">
             <p>Price </p>
-            <p>₹149875</p>
+            <p>₹{total}</p>
           </div>
 
           <div className="pricedata">
@@ -197,8 +200,8 @@ function Cart() {
           </div>
           <hr></hr>
           <div className="pricedata">
-            <p>Total Amount </p>
-            <p>₹119900</p>
+            <p>Total Amount  </p>
+            <p>₹{discount}</p>
           </div>
 
           {/* <Button style={{ margin:"auto"}}  colorScheme='red'>Place Order</Button> */}
@@ -224,7 +227,7 @@ function Cart() {
               </ModalBody>
               <ModalFooter>
                 
-                <Link to="/orders">
+                <Link to="/ordercard">
                   <Button onClick={handelOnSubtmi} style={{cursor:"pointer"}} variant="danger">See Orders</Button>
                 </Link>
               </ModalFooter>

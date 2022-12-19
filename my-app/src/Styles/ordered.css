@@ -1,7 +1,7 @@
  .mindiv{
     /* border: 1px solid red; */
     width: 90%;
-    height: 100vh;
+    /* height: 500px; */
     margin: auto;
     margin-top: 80px;
     display: flex;
@@ -27,14 +27,10 @@
  
  margin: auto;
  }
- .imgdiv img{
+ /* .imgdiv img{
 width: 100px;
 background-color: white;
 height: 100px;
- }
- /* .btn{
-    width: 180px;
-    justify-content: center;
-    align-content: center;
-    
+border: 1px solid red;
  } */
+  

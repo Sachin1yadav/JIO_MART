@@ -10,13 +10,13 @@ import Navbar from "./Pages/Navbar";
 import Allroute from "./AllRoutes/AllRote";
 // import ProducShow from "./Pages/Productshow";
 // import Details from"./Pages/Details"
- 
+ import ReturnFocus from "./Pages/Modal";
 function App() {
   return (
     <div className="App">
-      <Navbar/>     
-       <Allroute/>
-      {/* <Loading /> */}
+       <Navbar/>       
+        <Allroute/>  
+      {/* <ReturnFocus /> */}
       
     </div>
   );

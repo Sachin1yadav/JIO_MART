@@ -45,6 +45,13 @@ function Details() {
       isClosable: true,
     });
   };
+const[newPrice,setNewPrice]=useState()
+const changePrice = (str) => {
+  let res = str.replace(/\D/g, "");
+  return parseInt(res);
+};
+console.log("PRICE",changePrice(data.price)+50)
+//  setNewPrice(changePrice(data.price)+50)
 
   if (loading) {
     return <Loading />;
@@ -114,7 +121,7 @@ function Details() {
             </div>
 
             <h1 className="price">
-              {data.price} <p className="pricedis">{data.price}</p>
+              {data.price} <p className="pricedis">₹{changePrice(data.price)+50}</p>
             </h1>
             <p className="tex">inclusive of all taxes</p>
             <div className="addtocart">
