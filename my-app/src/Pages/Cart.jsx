@@ -21,7 +21,7 @@ import {
 import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
 // import { Button, ButtonGroup } from "@chakra-ui/react";
 import {
-  Modal,
+  Modal,Select,RadioGroup,Radio,
   ModalOverlay,
   ModalContent,
   ModalHeader,
@@ -76,7 +76,10 @@ function Cart() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = React.useState(<OverlayTwo />);
   const initialRef = useRef();
-
+  const handelOnSubtmi=()=>{
+     
+    onClose()
+  }
   if (state.cartItem.length === 0) {
     return <EmptyCart />;
   }
@@ -120,7 +123,7 @@ function Cart() {
                       />
                     </Col>
                     <Col md={2}>
-                      <span class="text">{prod.name}</span>
+                      <span className="text" >{prod.name}</span>
                     </Col>
                     <Col
                       md={2}
@@ -199,34 +202,8 @@ function Cart() {
           </div>
 
           {/* <Button style={{ margin:"auto"}}  colorScheme='red'>Place Order</Button> */}
-          <Button
-            variant="danger"
-            ml="4"
-            onClick={() => {
-              setOverlay(<OverlayTwo />);
-              onOpen();
-            }}
-          >
-            Place Order
-          </Button>
-          <Modal   isOpen={isOpen} onClose={onClose}>
-            {overlay}
-            <ModalContent>
-              <ModalHeader> </ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <img src="orderClip.gif" style={{ margin: "auto" }} />
-                <Text className="ord"> Order Successfully Placed!!</Text>
-              </ModalBody>
-              <ModalFooter>
-                <Button variant="danger" onClick={ 
-                console.log("CLICK")}>
-                  See Order
-                </Button>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
-          {/* <Button variant="danger" onClick={onOpen}  >
+         
+            <Button variant="danger" onClick={onOpen}  >
             Place Order
           </Button>
           <Modal
@@ -248,11 +225,11 @@ function Cart() {
               <ModalFooter>
                 
                 <Link to="/orders">
-                  <Button style={{cursor:"pointer"}} variant="danger">See Orders</Button>
+                  <Button onClick={handelOnSubtmi} style={{cursor:"pointer"}} variant="danger">See Orders</Button>
                 </Link>
               </ModalFooter>
             </ModalContent>
-          </Modal> */}
+          </Modal>  
         </div>
       </div>
     </div>

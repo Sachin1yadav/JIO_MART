@@ -8,6 +8,7 @@ import Details from "../Pages/Details";
 import Products from "../Pages/Products";
 import Orders from "../Pages/order";
 import Abount from"../ExtraPage/Abount"
+import OrderCard from "../ExtraPage/Ordered";
 function Allroute() {
   return (
     <>
@@ -21,6 +22,7 @@ function Allroute() {
         <Route path="/data/:id" element={<Details/>}></Route>
         <Route path="/about" element={<Abount/>} />
         <Route path="/checkout" element={<Checkout/>} />
+        <Route path="/ordercard" element={<OrderCard/>} />
       </Routes>
     </>
   );

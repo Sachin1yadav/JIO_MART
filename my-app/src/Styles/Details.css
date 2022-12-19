@@ -64,6 +64,7 @@ flex-direction: column
 margin-top: -0px;
 padding: 20px 20px 20px 20px;
 justify-content: center;
+/* border: 1px solid red; */
 align-content: center;
 background-color: rgb(255, 255, 255);
  }
@@ -71,6 +72,7 @@ background-color: rgb(255, 255, 255);
   justify-content: center;
 align-content: center;
 height: 90%;
+/* border: 1px solid red; */
 width: auto;
 margin: auto;
  }

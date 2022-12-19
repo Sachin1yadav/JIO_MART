@@ -97,9 +97,9 @@ function Navbar() {
                   {" "}
                   <p>Login</p>
                 </Link>
-                <Link to="/">
+                <Link to="/ordercard">
                   {" "}
-                  <p>My List</p>
+                  <p>My Orders</p>
                 </Link>
 
                 <hr style={{ height: "10px" }} />
@@ -148,8 +148,9 @@ function Navbar() {
               <MenuItem style={{ color: "white", background: "black" }}>
                 <Link to="/sign">Sign In</Link>
               </MenuItem>
+              
               <MenuItem style={{ color: "white", background: "black" }}>
-                About
+              <Link to="/ordercard">  My Order</Link>
               </MenuItem>
             </MenuList>
           </Menu>

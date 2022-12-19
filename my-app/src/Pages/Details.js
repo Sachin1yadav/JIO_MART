@@ -1,10 +1,10 @@
 import "../Styles/Details.css";
 import { useEffect, useContext } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Loading from "./Loading";
 import { Tooltip } from "@chakra-ui/react";
-import { Input, Button, Link, ButtonGroup } from "@chakra-ui/react";
+import { Input, Button, ButtonGroup } from "@chakra-ui/react";
 import { CartContext } from "../Contexts/CartContext";
 // import CartContextProvider from "../Contexts/CartContext";
 import { Toast, useToast } from "@chakra-ui/react";
@@ -88,12 +88,12 @@ function Details() {
               </div>
             </div>
             <div className="curimg">
-              <Link to="/cart">
+              <Link to="/products">
                 <Tooltip
                   bg="gray.300"
                   placement="bottom"
                   color="black"
-                  label="Conitune Shoping"
+                  label="continue shopping"
                 >
                   <button className="shopnow">
                     <BsFillArrowLeftCircleFill />
@@ -129,18 +129,6 @@ function Details() {
                   >
                     Go To Cart
                   </Button>
-                  {/* <Button
-              
-              variant="danger"
-              size="md"
-              height="48px"
-              width="200px"
-              border="2px"
-              background="#45f3ff"
-               
-            >
-              Go To Cart
-            </Button> */}
                 </Link>
               ) : (
                 <Button
@@ -150,13 +138,10 @@ function Details() {
                   width="200px"
                   border="2px"
                   background="#45f3ff"
-                  
                 >
                   Add To Cart
                 </Button>
               )}
-
-               
             </div>
             <hr style={{ color: "white", marginTop: "10px" }}></hr>
             <div className="prodit">

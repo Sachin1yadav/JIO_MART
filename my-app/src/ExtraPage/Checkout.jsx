@@ -334,7 +334,7 @@ export default function Checkout() {
                 variant="solid"
                 onClick={() => {
                   toast({
-                    title: 'Account created.',
+                    title: 'Congratulations',
                     description: "Order Placed",
                     status: 'success',
                     duration: 3000,

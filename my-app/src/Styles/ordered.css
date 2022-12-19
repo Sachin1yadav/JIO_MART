@@ -1,0 +1,40 @@
+ .mindiv{
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+
+ }
+ .itemdiv{
+    /* border: 2px solid green; */
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px dotted black;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+ .itemdiv div{
+ /* border: 1px solid rgb(51, 12, 192); */
+ width: 100%;
+ height: 90%;
+ 
+ margin: auto;
+ }
+ .imgdiv img{
+width: 100px;
+background-color: white;
+height: 100px;
+ }
+ /* .btn{
+    width: 180px;
+    justify-content: center;
+    align-content: center;
+    
+ } */
